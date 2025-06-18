@@ -1,6 +1,11 @@
 import { ethers } from 'ethers';
 
-export function loadPeriods() {
+export async function loadPeriods() {
+  console.log('Loading periods...');
+
+  const periods = await fetch('period.csv')
+  console.log('Periods loaded:', await periods.text());
+
   fetch('period.csv')
     .then(res => res.text())
     .then(data => {

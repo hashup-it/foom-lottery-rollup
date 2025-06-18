@@ -1,5 +1,5 @@
-import { ethers } from 'ethers';
 import { fl_foom_address, fl_foom_abi, fl_lottery_address, fl_lottery_abi, fl_new_ticket } from './foom.js';
+import { ethers } from 'ethers';
 
 let provider, signer;
 

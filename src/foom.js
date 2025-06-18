@@ -89,8 +89,7 @@ export async function fl_new_ticket(secret, power) {
 }
 
 async function fl_pedersenHash(data) {
-  const pedersen = await buildPedersenHash();
-  //const pedersen = await window.circomlibjs.buildPedersenHash();
+  const pedersen = await window.circomlibjs.buildPedersenHash();
   const pedersenOutput = pedersen.hash(data);
   const babyJubOutput = leBufferToBigint(
     pedersen.babyJub.F.fromMontgomery(
